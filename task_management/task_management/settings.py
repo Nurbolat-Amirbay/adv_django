@@ -83,43 +83,31 @@ DATABASES = {
 }
 
 REST_FRAMEWORK = { 
-
     'DEFAULT_FILTER_BACKENDS': [ 
-
         'django_filters.rest_framework.DjangoFilterBackend', 
-
         'rest_framework.filters.SearchFilter', 
-
     ], 
-
     'PAGE_SIZE': 10, 
 
+    'DEFAULT_AUTHENTICATION_CLASSES': [ 
+
+        'rest_framework_simplejwt.authentication.JWTAuthentication', 
+
+    ], 
 } 
 
 LOGGING = { 
-
     'version': 1, 
-
     'disable_existing_loggers': False, 
-
     'handlers': { 
-
         'console': { 
-
             'class': 'logging.StreamHandler', 
-
         }, 
-
     }, 
-
     'root': { 
-
         'handlers': ['console'], 
-
         'level': 'INFO', 
-
     }, 
-
 } 
 
 # Password validation
