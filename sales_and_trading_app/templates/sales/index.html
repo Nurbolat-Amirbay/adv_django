@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales Index</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    {% include 'base.html' %}
+    <div class="container">
+        <h1>Sales Dashboard</h1>
+        <p>Welcome to the Sales and Trading Application. Here you can manage your sales orders and invoices.</p>
+        <a href="{% url 'sales_order_list' %}">View Sales Orders</a>
+        <a href="{% url 'invoice_list' %}">View Invoices</a>
+    </div>
+</body>
+</html>

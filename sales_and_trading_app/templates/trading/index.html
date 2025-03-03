@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trading Dashboard</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    {% include 'base.html' %}
+    <div class="container">
+        <h1>Welcome to the Trading Dashboard</h1>
+        <p>Here you can manage your trading activities.</p>
+        <div class="trading-features">
+            <h2>Features</h2>
+            <ul>
+                <li><a href="{% url 'trading:order_list' %}">View Orders</a></li>
+                <li><a href="{% url 'trading:transaction_history' %}">Transaction History</a></li>
+                <li><a href="{% url 'trading:create_order' %}">Create New Order</a></li>
+            </ul>
+        </div>
+    </div>
+    {% endblock %}
+</body>
+</html>
